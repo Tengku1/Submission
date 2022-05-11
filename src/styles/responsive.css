@@ -1,0 +1,50 @@
+@media screen and (min-width:1000px) {
+    .listRestaurant .list .restaurant {
+        flex-basis: 32%;
+    }
+}
+
+@media screen and (min-width:784px) {
+    .app-bar {
+        grid-template-columns: 1fr auto;
+        padding: 8px 32px;
+    }
+
+    .app-bar .app-brand h1 {
+        font-size: 1.5em;
+    }
+
+    .app-bar .app-menu {
+        display: none;
+    }
+
+    .app-bar .app-navigation {
+        position: static;
+        width: 100%;
+    }
+
+    .app-bar .app-navigation ul li {
+        display: inline-block;
+    }
+
+    .app-bar .app-navigation ul li a {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:860px) {
+
+
+    .listRestaurant .list .restaurant {
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .listRestaurant .list .restaurant {
+        flex-basis: 99%;
+    }
+}

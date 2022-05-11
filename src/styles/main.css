@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Alegreya', serif;
+    scroll-behavior: smooth;
+}
+
+button,
+a,
+input,
+textarea {
+    min-width: 44px !important;
+    min-height: 44px !important;
+}
+
+body,
+html {
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: #3A4B40;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgb(3, 139, 82);
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.app-bar {
+    width: 100%;
+    position: fixed;
+    color: white;
+    padding: 5px 16px;
+    background-color: rgb(3, 139, 82);
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .brandMenu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.app-bar .app-menu {
+    flex-basis: 20%;
+}
+
+.app-bar .app-menu button {
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 8px 15%;
+    border-radius: 5px;
+    background-color: rgb(3, 139, 82);
+    box-shadow: 0 0 3px 2px rgb(5, 68, 42);
+    cursor: pointer;
+}
+
+.app-bar .app-brand {
+    /* padding-right: 20%; */
+    flex-basis: 80%;
+    text-align: center;
+}
+
+.app-bar .app-brand h1 {
+    user-select: none;
+}
+
+.app-bar .app-navigation {
+    position: fixed;
+    background-color: rgb(3, 139, 82);
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all .3s;
+    padding: 8px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.app-bar .app-navigation.open {
+    left: 0;
+}
+
+.app-bar .app-navigation ul li {
+    border-radius: 10px 0;
+}
+
+.app-bar .app-navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+.app-bar .app-navigation ul li:hover {
+    background-color: #006470;
+    box-shadow: 0 0 4px white;
+    transition: .1s ease-in-out;
+}
+
+/* Classes */
+main {
+    min-height: 90%;
+    padding: 20px 5%;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 550px;
+    padding: 30px 0;
+    text-align: center;
+    background: url("../public/images/hero.jpg") center no-repeat fixed;
+    background-size: cover;
+}
+
+.noItemMsg {
+    margin: 10% auto;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.listRestaurant {
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+
+.listRestaurant .listTitle {
+    display: block;
+    position: absolute;
+    padding: 10px 10%;
+    top: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #B26700;
+    box-shadow: 0 0 3px white;
+    z-index: 100;
+    color: white;
+}
+
+.listRestaurant .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 80px 0 20px !important;
+}
+
+
+.listRestaurant .list .restaurant {
+    position: relative;
+    flex-basis: 24.5%;
+    background-color: #D24B3E;
+    padding: 0 0 10px;
+    margin-right: 0.5%;
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px rgb(37, 37, 37);
+}
+
+.listRestaurant .detailList,
+.listRestaurant .favoriteList {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 20px !important;
+    color: white;
+}
+
+.detailList .restaurantDesc *,
+.favoriteList .restaurantDesc * {
+    margin: 15px 0;
+}
+
+.detailList .restaurantDesc {
+    width: 100%;
+}
+
+.detailList .restaurantDesc .addToFavoriteBtn,
+.favoriteList .restaurantDesc .removeFromFavoriteBtn {
+    padding: 10px 2%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer !important;
+    transition: .3s ease-in-out;
+}
+
+.detailList .restaurantDesc .menus {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.detailList .restaurantDesc .menus div {
+    flex-grow: 1;
+}
+
+.detailList .restaurantDesc .menus div ul li {
+    list-style-type: circle;
+}
+
+.detailList .restaurantDesc .customerReviews {
+    width: 100%;
+    padding-left: 1%;
+}
+
+.detailList .restaurantDesc .customerReviews div {
+    padding: 10px 2%;
+    background-color: #425b69;
+    border-radius: 5px;
+}
+
+.listRestaurant .detailList .restaurantImg,
+.listRestaurant .detailList .restaurantDesc {
+    flex-basis: 100%;
+}
+
+.listRestaurant .detailList .restaurantImg {
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+.listRestaurant .detailList .restaurantImg img {
+    width: 100%;
+    box-shadow: 0 0 2px 2px white;
+}
+
+.restaurant .restImg {
+    width: 100%;
+    height: 200px;
+}
+
+.restImg img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px;
+}
+
+.restaurant .restRate {
+    position: absolute;
+    background-color: #284270;
+    text-align: center;
+    left: 0;
+    top: 20px;
+    padding: 3px 5% 6px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.restDesc h2 {
+    margin: 10px 0 !important;
+}
+
+.restaurant .restDesc {
+    font-family: Arial, Helvetica, sans-serif !important;
+    padding: 10px 5%;
+    color: white;
+}
+
+.resNavBtn {
+    display: none;
+    border: none;
+    background-color: white;
+    padding: 10px 2%;
+    border-radius: 5px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    box-shadow: 0 0 3px white;
+    z-index: 9999;
+}
+
+.readMoreBtn {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(190, 137, 137);
+    transition: all .2s ease-out;
+    color: white;
+    cursor: pointer;
+}
+
+.readMoreBtn:hover {
+    background: #554475;
+    box-shadow: 0 0 3px white;
+}
+
+.skipToContent {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    padding: 10px 2%;
+    background-color: #7B386C;
+    font-weight: bolder;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    box-shadow: 0 0 3px white;
+    z-index: 9999;
+}
+
+.skipToContent:focus {
+    top: 70px;
+    transition: .1s ease-in-out;
+}
