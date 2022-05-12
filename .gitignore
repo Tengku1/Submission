@@ -1,4 +1,6 @@
 node_modules/
 dist/
+e2e/outputs/*
+
 # Local Netlify folder
 .netlify
