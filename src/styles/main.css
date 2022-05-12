@@ -127,15 +127,7 @@ main {
     height: 550px;
     padding: 30px 0;
     text-align: center;
-    background-image: url("../public/images/hero.jpg");
-    background-image:
-        -webkit-image-set(url("../public/images/hero.jpg") 1x,
-            url("../public/images/hero.jpg") 2x,
-        );
-    background-image:
-        image-set(url("../public/images/hero.jpg") 1x,
-            url("../public/images/hero.jpg") 2x,
-        );
+    background-image: url("../public/images/hero_small.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
