@@ -4,6 +4,7 @@ const assert = require('assert');
 Scenario('If Restaurant Favorite List Is Empty', async ({ I }) => {
     I.amOnPage('/#/Favorite');
     I.see('Tidak Ada Restoran Favorite', '.noItemMsg');
+    I.waitForElement('.noItemMsg', 5);
     I.amOnPage('/#main');
 
     I.wait(1);
@@ -56,6 +57,7 @@ Scenario('Should Can Remove Restaurant From To Favorite List', async ({ I }) => 
 
     I.amOnPage('/#/favorite');
     I.seeElement('.noItemMsg');
+    I.waitForElement('.noItemMsg', 5);
 });
 
 
