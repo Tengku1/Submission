@@ -3,7 +3,7 @@ import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const restaurantItems = (restaurants) => {
-  var restaurantHTML = ``;
+  var restaurantHTML = '';
   if (restaurants.length === 0 || restaurants === null) {
     return `
       <div class="noItemMsg">
@@ -17,11 +17,11 @@ const restaurantItems = (restaurants) => {
       <div class="restaurant">
         <div class="restImg">
             <picture>
-                <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
-                <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
-                <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
-                <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
-                <img class="lazyload" src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}">
+                <source type="image/webp" media="max-width:600px" data-srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
+                <source type="image/jpeg" media="max-width:600px" data-srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
+                <source type="image/webp" media="max-width:600px" data-srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
+                <source type="image/jpeg" media="max-width:600px" data-srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
+                <img class="lazyload" data-src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}">
             </picture>
         </div>
         <div class="restDesc">
@@ -41,11 +41,11 @@ const detailRestaurants = (restaurant) => {
   const detail = `
     <div class="restaurantImg">
         <picture>
-          <source type="image/webp media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
-          <source type="image/jpeg media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
-          <source type="image/webp media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
-          <source type="image/jpeg media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
-          <img class="lazyload" src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}"></img>
+          <source type="image/webp media="max-width:600px" data-srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
+          <source type="image/jpeg media="max-width:600px" data-srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
+          <source type="image/webp media="max-width:600px" data-srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
+          <source type="image/jpeg media="max-width:600px" data-srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}" alt="${restaurant.name}">
+          <img class="lazyload" data-src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}"></img>
         </picture>
     </div>
     <div class="restaurantDesc">
