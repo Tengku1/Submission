@@ -28,7 +28,7 @@ Scenario('Should Can Select Restaurant and Add To Favorite List', async ({ I }) 
     }
 
     I.amOnPage('/#/favorite');
-    I.seeElement('.list');
+    I.seeElement('.restaurant');
 });
 
 Scenario('Should Can Remove Restaurant From To Favorite List', async ({ I }) => {
@@ -55,7 +55,7 @@ Scenario('Should Can Remove Restaurant From To Favorite List', async ({ I }) => 
     }
 
     I.amOnPage('/#/favorite');
-    I.seeElement('.list');
+    I.seeElement('.noItemMsg');
 });
 
 
