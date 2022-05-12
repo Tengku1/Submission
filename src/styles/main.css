@@ -130,7 +130,6 @@ main {
     background-image: url("../public/images/hero_small.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .noItemMsg {
