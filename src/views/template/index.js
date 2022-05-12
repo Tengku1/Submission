@@ -15,22 +15,22 @@ const restaurantItems = (restaurants) => {
   restaurants.map((restaurant) => {
     restaurantHTML += `
       <div class="restaurant">
-      <div class="restImg">
-          <picture>
-              <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
-              <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
-              <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
-              <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
-              <img class="lazyload" src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}">
-          </picture>
-      </div>
-      <div class="restDesc">
-          <div class="restRate">Rate : ${restaurant.rating}</div>
-          <small>${restaurant.city}</small>
-          <h2>${restaurant.name}</h2>
-          <span>${restaurant.description.substring(0, 350)} ...</span>
-          <button class="readMoreBtn" onclick="window.location.href='#/detail/${restaurant.id}'">Read More</button>
-      </div>
+        <div class="restImg">
+            <picture>
+                <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
+                <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}">
+                <source type="image/webp" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
+                <source type="image/jpeg" media="max-width:600px" srcset="${CONFIG.BASE_LARGE_IMG}${restaurant.pictureId}">
+                <img class="lazyload" src="${CONFIG.BASE_SMALL_IMG}${restaurant.pictureId}" width="400" height="400" alt="${restaurant.name}">
+            </picture>
+        </div>
+        <div class="restDesc">
+            <div class="restRate">Rate : ${restaurant.rating}</div>
+            <small>${restaurant.city}</small>
+            <h2>${restaurant.name}</h2>
+            <span>${restaurant.description.substring(0, 350)} ...</span>
+            <button class="readMoreBtn" onclick="window.location.href='#/detail/${restaurant.id}'">Read More</button>
+        </div>
       </div>
     `;
   });
